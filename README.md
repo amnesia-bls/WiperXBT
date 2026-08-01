@@ -1,4 +1,13 @@
-# WiperXBT
+<p align="center">
+  <img src="banner.png" alt="WiperXBT" width="100%"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/language-C-blue?style=flat-square"/>
+  <img src="https://img.shields.io/badge/platform-Linux-lightgrey?style=flat-square"/>
+  <img src="https://img.shields.io/badge/runs%20from-RAM-red?style=flat-square"/>
+  <img src="https://img.shields.io/badge/disk-bricked-black?style=flat-square"/>
+</p>
 
 Wipes a Linux system's disk and replaces the bootloader with a custom message. Runs entirely from RAM so it can destroy the disk it was launched from.
 
