@@ -1,0 +1,6 @@
+null_loader
+main
+*.bin
+*.img
+*.o
+.vscode/
