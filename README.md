@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="banner.png" alt="WiperXBT" width="100%"/>
+  <img src="banner.png" alt="WiperXBT"/>
 </p>
 
 <p align="center">
