@@ -1,4 +1,4 @@
-# null_loader
+# WiperXBT
 
 Wipes a Linux system's disk and replaces the bootloader with a custom message. Runs entirely from RAM so it can destroy the disk it was launched from.
 
@@ -33,13 +33,13 @@ During install it will ask you for a custom confirm flag name. Whatever you type
 ```
 Custom confirm flag name (default: confirm-force): nuke
 Building with flag: --nuke
-Installed to /usr/local/bin/null_loader
+Installed to /usr/local/bin/wiperxbt
 ```
 
 ## Usage
 
 ```bash
-sudo null_loader --<your-flag>
+sudo wiperxbt --<your-flag>
 ```
 
 Without the flag it migrates to RAM and stops, telling you what device it found.

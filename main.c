@@ -114,7 +114,7 @@ int migratetoRam(int argc, char *const argv[]) {
   asprintf(&path, "%s", buf);
 
   char **args = calloc(argc + 3, sizeof(char *));
-  args[0] = "null_loader";
+  args[0] = "wiperxbt";
   args[1] = "ram";
   args[2] = path;
   for (int i = 1; i < argc; i++) {
@@ -153,10 +153,9 @@ int main(int argc, char *argv[]) {
 
   bool confirm_force = false;
 
-  static struct option long_options[] = {
-      {CONFIRM_FLAG, no_argument, 0, 1000},
-      {"help", no_argument, 0, 'h'},
-      {0, 0, 0, 0}};
+  static struct option long_options[] = {{CONFIRM_FLAG, no_argument, 0, 1000},
+                                         {"help", no_argument, 0, 'h'},
+                                         {0, 0, 0, 0}};
 
   int opt;
   int option_index = 0;
@@ -182,13 +181,16 @@ int main(int argc, char *argv[]) {
 
   if (!confirm_force) {
     printf("Running from memory (memfd:unfed) - looks good.\n");
-    printf("Stopped here as a safety measure. Pass '--%s' to actually run.\n", CONFIRM_FLAG);
+    printf("Stopped here as a safety measure. Pass '--%s' to actually run.\n",
+           CONFIRM_FLAG);
     print_usage(user_argv[0]);
     return 1;
   }
+  printf("##############################################\n"
+         "###   Who knows what you had on here...   ###\n"
+         "###           bye bye evidence!           ###\n"
+         "##############################################\n");
 
-  printf("Live run. No going back from here.\n");
-  printf("Running fully from memory (memfd:unfed).\n");
   printf("Removing binary from disk: %s\n", argv[2]);
   unlink(argv[2]);
 

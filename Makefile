@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -O2
-TARGET = null_loader
+TARGET = wiperxbt
 
 all: $(TARGET)
 
